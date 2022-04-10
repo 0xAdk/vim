@@ -2065,7 +2065,8 @@ typedef int sock_T;
 #define VV_SIZEOFLONG	101
 #define VV_SIZEOFPOINTER 102
 #define VV_MAXCOL	103
-#define VV_LEN		104	// number of v: vars
+#define VV_CANCEL_EVENT	104
+#define VV_LEN		105	// number of v: vars
 
 // used for v_number in VAR_BOOL and VAR_SPECIAL
 #define VVAL_FALSE	0L	// VAR_BOOL

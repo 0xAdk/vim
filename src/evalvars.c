@@ -155,6 +155,7 @@ static struct vimvar
     {VV_NAME("sizeoflong",	 VAR_NUMBER), NULL, VV_RO},
     {VV_NAME("sizeofpointer",	 VAR_NUMBER), NULL, VV_RO},
     {VV_NAME("maxcol",		 VAR_NUMBER), NULL, VV_RO},
+    {VV_NAME("cancel_event",	 VAR_BOOL), NULL, 0},
 };
 
 // shorthand

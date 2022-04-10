@@ -5717,7 +5717,12 @@ not_exiting(void)
     int
 before_quit_autocmds(win_T *wp, int quit_all, int forceit)
 {
+    set_vim_var_nr(VV_CANCEL_EVENT, VVAL_FALSE);
     apply_autocmds(EVENT_QUITPRE, NULL, NULL, FALSE, wp->w_buffer);
+
+    if (!forceit && get_vim_var_nr(VV_CANCEL_EVENT) == VVAL_TRUE) {
+	return TRUE;
+    }
 
     // Bail out when autocommands closed the window.
     // Refuse to quit when the buffer in the last window is being closed (can
